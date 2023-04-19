@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title> Personal Portfolio -Rishi Shatrma</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/b46b6a5f7f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.jpeg" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Student</p>
+                    <h1>Hi, I'm <span>Rishi</span> Sharma </h1>
+                </div>
+            </div>
+        </div> 
+        <!-- -------about---------- -->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/my.jpeg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title"> About Me </h1>
+                        <p>I am Highly organised , dedicated and disciplined person with proven ability to do anything given to me I am always energetic and eager to learn new skills.
+                             I am a dependable person who is great at time management, and has experience working as part of a team and individually. I am flexible in my working hours , 
+                             being able to work evenings and weekends. 
+                            I am always on time for organized events, work related or otherwise . ​</p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                                <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Programming languages</span><br> C and C++</li>
+                                    <li><span>Web development </span><br>Front hand</li>
+                                    <li><span>Hardware skills </span><br>Arduino and ESP32</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2022-present</span><br> B.E (ECE) </li>
+                                    <li><span>2020 </span><br>12th </li>
+                                    <li><span>2018 </span><br>10th</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-contents" id="hobbies">
+                            <ul>
+                                <li><span>Plyaing volleyball</span><br> </li>
+                                <li><span>Coding </span><br> </li>
+                                <li><span>Travelling </span><br></li>
+                            </ul>
+            
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ------education-------- -->
+
+<div id="education">
+    <div class="container">
+        <h1 class="sub-title"> Education </h1>
+        <div class="education-list">
+            <div>
+                <h2>Bachelor of Engineering (2022-present)</h2>
+                <p> Persuing  Bachelor of Engineering in Electronics and Communication From Thapar Institute of Engineering and Technology.</p>
+            </div>
+            <div>
+                <h2>12th (2020) </h2>
+                <p> Got 92.40% and PCM 90% and I was the Head Boy of My School during this period .
+                    And in  11th class I was the House Captain of One of the Four Houses of My School and got 1st position in overall performance . </p>
+            </div>
+            <div>
+                <h2>10th (2018)</h2>
+                <p> Got 90% </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- ------------ contact-------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> rishidadhich0809@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 6367862309</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/ur_rishi_0809?igshid=ZDdkNTZiNTM="><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href="www.linkedin.com/in/rishi-sharma-b68532"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="copyright">
+    <p>copyright © Rishi sharma <i class="fa-solid fa-heart"></i></p>
+</div>
+
+</div>
+
+
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+        <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw81M6iSZ-NjC6EmWJKrnnBTa6Tg9g3eeszoSun6H1gtKOEdGA63m5t0EFpABIPXxoN/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML="Message sent Successfully"
+        setTimeout(function(){
+            msg.innerHTML =""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+    </body>
+</html>
